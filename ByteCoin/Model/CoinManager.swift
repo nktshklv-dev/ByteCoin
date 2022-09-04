@@ -10,7 +10,7 @@ import Foundation
 
 
 protocol CoinManagerDelegate{
-    func didUpdateInfo(_ coinManager: CoinManager, coinModel: CoinModel)
+    func didUpdateCoinModel(_ coinManager: CoinManager, coinModel: CoinModel)
     
     func didFailWithError(error: Error)
 }
@@ -40,7 +40,7 @@ struct CoinManager {
             }
             guard let safeData = data else {return}
             guard let coinModel = parseJSON(data: safeData) else {return}
-            delegate?.didUpdateInfo(self, coinModel: coinModel)
+            delegate?.didUpdateCoinModel(self, coinModel: coinModel)
             
         }
         
