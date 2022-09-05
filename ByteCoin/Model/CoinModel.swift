@@ -12,7 +12,6 @@ import Foundation
 
 
 struct CoinModel{
-    let baseCurrency: String = "BTC"
     let quoteCurrency: String
     let rate: Double
     

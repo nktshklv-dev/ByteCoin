@@ -46,10 +46,6 @@ struct CoinManager {
         
         
         task.resume()
-        
-        
-        
-        
     }
     
     
